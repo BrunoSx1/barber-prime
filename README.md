@@ -61,7 +61,7 @@ o site funciona em modo demonstrativo.
 
 ## Demonstração
 
-Adicione aqui o endereço publicado na Netlify.
+(https://barberprime-dev.netlify.app/?utm_source=chatgpt.com)
 
 ## Autor
 

@@ -1,0 +1,794 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- CONFIGURAÇÕES GERAIS -->
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Barber Prime | Barbearia Premium</title>
+
+    <meta
+        name="description"
+        content="Conheça a Barber Prime, projeto demonstrativo de uma barbearia premium com cortes masculinos, barba, serviços e agendamentos."
+    >
+
+    <meta name="theme-color" content="#0b0b0b">
+
+    <!-- FAVICON -->
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="assets/favicon.svg"
+    >
+
+    <!-- FONTES -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js" defer></script>
+
+</head>
+
+
+<body>
+
+    <!-- ACESSIBILIDADE -->
+    <a href="#conteudo-principal" class="skip-link">
+        Pular para o conteúdo principal
+    </a>
+
+
+    <!-- =====================================
+         01 — CABEÇALHO
+    ===================================== -->
+
+    <header class="header">
+
+        <div class="container header-content">
+
+            <!-- LOGOTIPO -->
+            <a href="#inicio" class="logo">
+                BARBER <span>PRIME.</span>
+            </a>
+
+            <!-- BOTÃO MENU MOBILE -->
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="menu-principal"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- NAVEGAÇÃO -->
+            <nav
+                id="menu-principal"
+                class="navigation"
+                aria-label="Navegação principal"
+            >
+
+                <a href="#inicio">Início</a>
+
+                <a href="#servicos">Serviços</a>
+
+                <a href="#galeria">Galeria</a>
+
+                <a href="#sobre">Sobre</a>
+
+                <a href="#contato">Contato</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================
+         CONTEÚDO PRINCIPAL
+    ===================================== -->
+
+    <main id="conteudo-principal" tabindex="-1">
+
+
+        <!-- =====================================
+             02 — HERO
+        ===================================== -->
+
+        <section id="inicio" class="hero">
+
+            <div class="container hero-content">
+
+                <!-- TEXTO PRINCIPAL -->
+                <div class="hero-text" data-reveal>
+
+                    <p class="eyebrow">
+                        ESTILO • PRECISÃO • TRADIÇÃO
+                    </p>
+
+                    <h1>
+                        Seu estilo merece
+                        <span>o melhor.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Muito mais que um corte de cabelo.
+                        Uma experiência premium de cuidado,
+                        confiança e personalidade.
+
+                        Descubra um novo conceito em
+                        barbearia masculina.
+                    </p>
+
+                    <a href="#servicos" class="button">
+                        CONHEÇA NOSSOS SERVIÇOS
+                    </a>
+
+                </div>
+
+
+                <!-- FOTOGRAFIA PRINCIPAL -->
+                <div class="hero-visual" data-reveal>
+
+                    <div class="hero-photo-frame">
+
+                        <img
+                            src="assets/hero-barber.jpg"
+                            alt="Barbeiro realizando um corte de cabelo com precisão"
+                            class="hero-photo"
+                            fetchpriority="high"
+                        >
+
+                    </div>
+
+
+                    <!-- SELO DECORATIVO -->
+                    <div class="hero-seal" aria-hidden="true">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            width="27"
+                            height="27"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <circle cx="6" cy="6" r="3"/>
+                            <circle cx="6" cy="18" r="3"/>
+                            <path d="M8.12 8.12 20 20"/>
+                            <path d="M14.8 9.2 20 4"/>
+                            <path d="M8.12 15.88 11 13"/>
+                        </svg>
+
+                        <span>
+                            ESTILO COM PRECISÃO
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             03 — SERVIÇOS
+        ===================================== -->
+
+        <section id="servicos" class="section services">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    NOSSA ESPECIALIDADE
+                </p>
+
+                <h2>Serviços Premium</h2>
+
+
+                <div class="services-grid">
+
+                    <!-- SERVIÇO 01 -->
+                    <article class="service-card" data-reveal>
+
+                        <div class="service-icon" aria-hidden="true">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="6" cy="6" r="3"/>
+                                <circle cx="6" cy="18" r="3"/>
+                                <path d="M8.12 8.12 20 20"/>
+                                <path d="M14.8 9.2 20 4"/>
+                                <path d="M8.12 15.88 11 13"/>
+                            </svg>
+
+                        </div>
+
+                        <h3>Corte Masculino</h3>
+
+                        <p>
+                            Cortes clássicos e modernos
+                            com acabamento impecável
+                            e atenção a cada detalhe.
+                        </p>
+
+                        <strong>R$ 55,00</strong>
+
+                        <a
+                            href="#contato"
+                            class="service-booking"
+                            data-service="Corte Masculino"
+                        >
+                            Agendar horário
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- SERVIÇO 02 -->
+                    <article class="service-card" data-reveal>
+
+                        <div class="service-icon" aria-hidden="true">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M12 3v3"/>
+                                <path d="M12 18v3"/>
+                                <path d="M3 12h3"/>
+                                <path d="M18 12h3"/>
+                                <path d="m5.6 5.6 2.1 2.1"/>
+                                <path d="m16.3 16.3 2.1 2.1"/>
+                                <path d="m18.4 5.6-2.1 2.1"/>
+                                <path d="m7.7 16.3-2.1 2.1"/>
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+
+                        </div>
+
+                        <h3>Barba Premium</h3>
+
+                        <p>
+                            Modelagem personalizada,
+                            toalha quente e finalização
+                            para um visual elegante.
+                        </p>
+
+                        <strong>R$ 40,00</strong>
+
+                        <a
+                            href="#contato"
+                            class="service-booking"
+                            data-service="Barba Premium"
+                        >
+                            Agendar horário
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- SERVIÇO 03 -->
+                    <article class="service-card" data-reveal>
+
+                        <div class="service-icon" aria-hidden="true">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="m2 8 5 4 5-7 5 7 5-4-2 11H4L2 8Z"/>
+                                <path d="M4 22h16"/>
+                            </svg>
+
+                        </div>
+
+                        <h3>Combo Prime</h3>
+
+                        <p>
+                            Corte e barba em uma
+                            experiência completa
+                            de cuidado e estilo.
+                        </p>
+
+                        <strong>R$ 85,00</strong>
+
+                        <a
+                            href="#contato"
+                            class="service-booking"
+                            data-service="Combo Prime"
+                        >
+                            Agendar horário
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             04 — GALERIA
+        ===================================== -->
+
+        <section
+            id="galeria"
+            class="section gallery-section"
+        >
+
+            <div class="container">
+
+                <!-- TÍTULO -->
+                <div class="gallery-heading" data-reveal>
+
+                    <p class="eyebrow">
+                        NOSSO UNIVERSO
+                    </p>
+
+                    <h2>
+                        A arte está nos detalhes.
+                    </h2>
+
+                    <p class="gallery-intro">
+                        Técnica, personalidade e tradição.
+                        Conheça a inspiração por trás
+                        da experiência Barber Prime.
+                    </p>
+
+                </div>
+
+
+                <!-- FOTOGRAFIAS -->
+                <div class="gallery-grid">
+
+                    <!-- FOTOGRAFIA 01 -->
+                    <figure class="gallery-item" data-reveal>
+
+                        <button
+                            class="gallery-open"
+                            type="button"
+                            aria-label="Ampliar foto: A arte do corte"
+                        >
+
+                            <img
+                                src="assets/galeria-corte.jpg"
+                                alt="Barbeiro realizando um corte masculino"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                        </button>
+
+                        <figcaption>
+
+                            <span>01 / PRECISÃO</span>
+
+                            <h3>A arte do corte</h3>
+
+                        </figcaption>
+
+                    </figure>
+
+
+
+                    <!-- FOTOGRAFIA 02 -->
+                    <figure class="gallery-item" data-reveal>
+
+                        <button
+                            class="gallery-open"
+                            type="button"
+                            aria-label="Ampliar foto: Barba premium"
+                        >
+
+                            <img
+                                src="assets/galeria-barba.jpg"
+                                alt="Profissional realizando cuidados com a barba"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                        </button>
+
+                        <figcaption>
+
+                            <span>02 / TRADIÇÃO</span>
+
+                            <h3>Barba premium</h3>
+
+                        </figcaption>
+
+                    </figure>
+
+
+
+                    <!-- FOTOGRAFIA 03 -->
+                    <figure class="gallery-item" data-reveal>
+
+                        <button
+                            class="gallery-open"
+                            type="button"
+                            aria-label="Ampliar foto: Nosso ambiente"
+                        >
+
+                            <img
+                                src="assets/galeria-ambiente.jpg"
+                                alt="Interior de uma barbearia clássica"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                        </button>
+
+                        <figcaption>
+
+                            <span>03 / EXPERIÊNCIA</span>
+
+                            <h3>Nosso ambiente</h3>
+
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             05 — SOBRE NÓS
+        ===================================== -->
+
+        <section id="sobre" class="section about">
+
+            <div class="container about-layout">
+
+
+                <!-- FOTOGRAFIA SOBRE NÓS -->
+                <div class="about-media" data-reveal>
+
+                    <div class="about-image-wrap">
+
+                        <img
+                            src="assets/galeria-ambiente.jpg"
+                            alt="Ambiente clássico e elegante de uma barbearia"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                    </div>
+
+
+                    <!-- SELO DECORATIVO -->
+                    <div class="about-stamp" aria-hidden="true">
+
+                        <span>BP</span>
+
+                        <small>
+                            ESTILO &amp; TRADIÇÃO
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- APRESENTAÇÃO DA BARBEARIA -->
+                <div class="about-content" data-reveal>
+
+                    <p class="eyebrow">
+                        CONHEÇA A BARBER PRIME
+                    </p>
+
+                    <h2>
+                        Mais que um corte.
+                        <span>Uma experiência.</span>
+                    </h2>
+
+                    <p class="about-description">
+                        Na Barber Prime, acreditamos que
+                        o estilo vai muito além da aparência.
+                        Cada corte representa personalidade,
+                        confiança e atenção aos detalhes.
+
+                        Nossa proposta é unir a tradição
+                        das barbearias clássicas às técnicas
+                        modernas, proporcionando uma
+                        experiência diferenciada
+                        de cuidado masculino.
+                    </p>
+
+
+                    <!-- DIFERENCIAIS -->
+                    <div class="about-benefits">
+
+
+                        <!-- DIFERENCIAL 01 -->
+                        <div class="about-benefit">
+
+                            <span
+                                class="about-benefit-icon"
+                                aria-hidden="true"
+                            >
+                                ✦
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Atendimento Personalizado
+                                </h3>
+
+                                <p>
+                                    Cada cliente recebe
+                                    atenção especial para
+                                    valorizar seu estilo.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- DIFERENCIAL 02 -->
+                        <div class="about-benefit">
+
+                            <span
+                                class="about-benefit-icon"
+                                aria-hidden="true"
+                            >
+                                ✦
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Precisão em Cada Detalhe
+                                </h3>
+
+                                <p>
+                                    Técnicas modernas
+                                    combinadas com o
+                                    cuidado tradicional.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- DIFERENCIAL 03 -->
+                        <div class="about-benefit">
+
+                            <span
+                                class="about-benefit-icon"
+                                aria-hidden="true"
+                            >
+                                ✦
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Experiência Premium
+                                </h3>
+
+                                <p>
+                                    Um ambiente pensado
+                                    para conforto, estilo
+                                    e bem-estar.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LINK PARA SERVIÇOS -->
+                    <a
+                        href="#servicos"
+                        class="about-link"
+                    >
+
+                        EXPLORE NOSSOS SERVIÇOS
+
+                        <span aria-hidden="true">→</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             06 — CONTATO E AGENDAMENTO
+        ===================================== -->
+
+        <section
+            id="contato"
+            class="section contact"
+        >
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    SUA PRÓXIMA EXPERIÊNCIA
+                </p>
+
+                <h2>
+                    Pronto para renovar seu estilo?
+                </h2>
+
+                <p>
+                    Escolha seu serviço favorito
+                    e entre em contato para consultar
+                    os horários disponíveis.
+                </p>
+
+
+                <!-- BOTÃO DE AGENDAMENTO -->
+                <a
+                    href="#contato"
+                    class="button"
+                    data-service="Atendimento geral"
+                >
+
+                    AGENDAR PELO WHATSAPP
+
+                </a>
+
+
+                <!-- AVISO DO MODO DEMONSTRATIVO -->
+                <p
+                    id="booking-status"
+                    class="booking-status"
+                    role="status"
+                    aria-live="polite"
+                    hidden
+                ></p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         07 — RODAPÉ
+    ===================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                BARBER PRIME — ESTILO, PRECISÃO E TRADIÇÃO.
+            </p>
+
+            <p>
+                Projeto demonstrativo desenvolvido
+                para portfólio profissional.
+            </p>
+
+            <p>
+                © <span id="year"></span>
+                Barber Prime. Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================
+         08 — VISUALIZADOR DA GALERIA
+    ===================================== -->
+
+    <dialog
+        id="gallery-dialog"
+        class="gallery-dialog"
+        aria-label="Visualização ampliada da galeria"
+    >
+
+        <!-- BOTÃO FECHAR -->
+        <button
+            type="button"
+            class="gallery-close"
+            aria-label="Fechar fotografia"
+        >
+            &times;
+        </button>
+
+
+        <!-- IMAGEM AMPLIADA -->
+        <figure>
+
+            <img
+                id="gallery-dialog-image"
+                src=""
+                alt=""
+            >
+
+            <figcaption
+                id="gallery-dialog-caption"
+            ></figcaption>
+
+        </figure>
+
+    </dialog>
+
+
+</body>
+
+</html>

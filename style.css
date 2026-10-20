@@ -1,0 +1,1677 @@
+
+/* ==========================================
+   BARBER PRIME — DESIGN PREMIUM
+   Etapa 2: Identidade Visual
+========================================== */
+
+/* 1. FONTES */
+
+
+/* 2. VARIÁVEIS GLOBAIS */
+
+:root {
+    --bg: #0b0b0b;
+    --bg-soft: #131313;
+    --surface: #181818;
+
+    --gold: #c9a66b;
+    --gold-light: #ecd3a0;
+
+    --white: #f6f1e8;
+    --muted: #b9b1a5;
+
+    --border: rgba(201, 166, 107, 0.18);
+
+    --font-title: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', Arial, sans-serif;
+}
+
+
+/* 3. RESET E CONFIGURAÇÕES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: var(--font-body);
+    line-height: 1.7;
+}
+
+::selection {
+    background: var(--gold);
+    color: var(--bg);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 5px;
+}
+
+.container {
+    width: min(100% - 48px, 1180px);
+    margin-inline: auto;
+}
+
+
+/* 4. CABEÇALHO */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(11, 11, 11, 0.94);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.header-content {
+    min-height: 92px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.navigation a {
+    position: relative;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    color: var(--muted);
+    transition: color 0.25s ease;
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: -9px;
+
+    width: 100%;
+    height: 1px;
+
+    background: var(--gold);
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navigation a:hover {
+    color: var(--gold-light);
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* 5. SEÇÃO PRINCIPAL — HERO */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    min-height: 690px;
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            ellipse at 80% 45%,
+            rgba(135, 94, 41, 0.19),
+            transparent 48%
+        ),
+        linear-gradient(
+            120deg,
+            #080808,
+            #15120e 65%,
+            #0b0b0b
+        );
+}
+
+/* Linhas decorativas discretas */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: repeating-linear-gradient(
+        90deg,
+        transparent 0,
+        transparent 158px,
+        rgba(201, 166, 107, 0.07) 159px,
+        transparent 160px
+    );
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 64px;
+
+    padding-block: 100px;
+}
+
+
+/* 6. TIPOGRAFIA DA HERO */
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    margin-bottom: 22px;
+}
+
+.eyebrow::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    flex-shrink: 0;
+    background: var(--gold);
+}
+
+.hero h1 {
+    font-family: var(--font-title);
+    font-size: clamp(58px, 7vw, 100px);
+    font-weight: 600;
+    line-height: 0.98;
+    letter-spacing: -2px;
+
+    max-width: 680px;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--gold-light);
+    font-style: italic;
+}
+
+.hero-description {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--muted);
+
+    max-width: 440px;
+    margin-bottom: 36px;
+}
+
+
+/* 7. BOTÃO PRINCIPAL */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 56px;
+    padding: 18px 28px;
+
+    background: var(--gold);
+    color: #101010;
+
+    border: 1px solid var(--gold);
+    border-radius: 2px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.button:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 35px
+        rgba(201, 166, 107, 0.17);
+}
+
+
+/* 8. ELEMENTO VISUAL PRINCIPAL */
+
+.hero-visual {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    min-height: 430px;
+}
+
+/* Iluminação atrás do símbolo */
+
+.hero-visual::before {
+    content: "";
+    position: absolute;
+
+    width: 75%;
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(201, 166, 107, 0.16),
+        transparent 70%
+    );
+
+    filter: blur(24px);
+}
+
+.visual-circle {
+    position: relative;
+
+    width: min(100%, 370px);
+    aspect-ratio: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        #241d13,
+        #0e0e0e 75%
+    );
+
+    box-shadow:
+        0 0 80px rgba(201, 166, 107, 0.10),
+        inset 0 0 45px rgba(201, 166, 107, 0.05);
+}
+
+/* Anéis decorativos */
+
+.visual-circle::before,
+.visual-circle::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.visual-circle::before {
+    inset: 16px;
+    border: 1px dashed rgba(201, 166, 107, 0.35);
+}
+
+.visual-circle::after {
+    inset: -17px;
+    border: 1px solid rgba(201, 166, 107, 0.20);
+}
+
+.visual-circle span {
+    color: var(--gold-light);
+    font-size: 90px;
+    line-height: 1;
+    margin-bottom: 22px;
+}
+
+.visual-circle p {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.visual-circle small {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-top: 8px;
+}
+
+
+/* 9. ESTILOS DAS SEÇÕES */
+
+.section {
+    padding-block: 110px;
+}
+
+.section h2 {
+    font-family: var(--font-title);
+    font-size: clamp(44px, 5vw, 70px);
+    font-weight: 600;
+    line-height: 1.05;
+
+    letter-spacing: -1px;
+    margin-bottom: 45px;
+}
+
+
+/* 10. SERVIÇOS */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+
+    counter-reset: service;
+}
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 265px;
+    padding: 38px 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+
+    counter-increment: service;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+/* Linha dourada superior */
+
+.service-card::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    background: var(--gold);
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+/* Numeração automática */
+
+.service-card::after {
+    content: "0" counter(service);
+
+    position: absolute;
+    top: 22px;
+    right: 28px;
+
+    font-family: var(--font-title);
+    font-size: 44px;
+    color: rgba(201, 166, 107, 0.28);
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+
+    background: #1e1b17;
+    border-color: rgba(201, 166, 107, 0.5);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card h3 {
+    font-family: var(--font-title);
+    font-size: 31px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    padding-right: 35px;
+    margin-bottom: 18px;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+.service-card strong {
+    margin-top: auto;
+
+    font-size: 23px;
+    font-weight: 600;
+    color: var(--gold-light);
+}
+
+
+/* 11. SOBRE A BARBEARIA */
+
+.about {
+    position: relative;
+
+    background:
+        radial-gradient(
+            ellipse at 0% 50%,
+            rgba(201, 166, 107, 0.06),
+            transparent 55%
+        ),
+        var(--bg-soft);
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.about .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "label description"
+        "title description";
+
+    column-gap: 75px;
+    align-items: center;
+}
+
+.about .eyebrow {
+    grid-area: label;
+}
+
+.about h2 {
+    grid-area: title;
+    margin-bottom: 0;
+}
+
+.about p:not(.eyebrow) {
+    grid-area: description;
+
+    font-size: 16px;
+    line-height: 2;
+    color: var(--muted);
+
+    padding-left: 28px;
+    border-left: 1px solid var(--gold);
+}
+
+
+/* 12. CONTATO */
+
+.contact {
+    position: relative;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(201, 166, 107, 0.07),
+            transparent 60%
+        );
+}
+
+.contact .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact .eyebrow {
+    justify-content: center;
+}
+
+.contact h2 {
+    max-width: 700px;
+    margin-bottom: 24px;
+}
+
+.contact p:not(.eyebrow) {
+    max-width: 540px;
+
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+
+/* 13. RODAPÉ */
+
+.footer {
+    padding: 32px 0;
+
+    background: #070707;
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+    color: var(--muted);
+
+    font-size: 12px;
+    letter-spacing: 0.3px;
+}
+
+.footer p + p {
+    margin-top: 8px;
+}
+
+
+/* 14. RESPONSIVIDADE — TABLETS */
+
+@media (max-width: 900px) {
+
+    .navigation {
+        gap: 20px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 35px;
+
+        padding-block: 85px;
+    }
+
+    .hero h1 {
+        max-width: 700px;
+        margin-inline: auto;
+    }
+
+    .hero .eyebrow {
+        justify-content: center;
+    }
+
+    .hero-description {
+        margin-inline: auto;
+    }
+
+    .hero-visual {
+        min-height: 370px;
+    }
+
+    .visual-circle {
+        width: 310px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about .container {
+        display: block;
+    }
+
+    .about h2 {
+        margin-bottom: 28px;
+    }
+
+    .about p:not(.eyebrow) {
+        padding-left: 22px;
+    }
+}
+
+
+/* 15. RESPONSIVIDADE — CELULARES */
+
+@media (max-width: 767px) {
+
+    .container {
+        width: min(100% - 36px, 1180px);
+    }
+
+    .header-content {
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+
+        padding-block: 18px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .navigation {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding-block: 75px;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 11vw, 66px);
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 17px 20px;
+        font-size: 10px;
+    }
+
+    .hero-visual {
+        min-height: 305px;
+    }
+
+    .visual-circle {
+        width: min(72vw, 270px);
+    }
+
+    .visual-circle span {
+        font-size: 67px;
+    }
+
+    .visual-circle p {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .section {
+        padding-block: 78px;
+    }
+
+    .section h2 {
+        font-size: 46px;
+        margin-bottom: 32px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 235px;
+    }
+
+    .about h2 {
+        margin-bottom: 28px;
+    }
+
+    .contact h2 {
+        font-size: 44px;
+    }
+}
+
+
+/* 16. ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+/* ==========================================
+   ETAPA 3 — IMAGENS, ÍCONES E ANIMAÇÕES
+========================================== */
+
+
+/* 1. FOTOGRAFIA DA HERO */
+
+.hero-visual {
+    min-height: 560px;
+}
+
+.hero-photo-frame {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    width: min(100%, 420px);
+    aspect-ratio: 4 / 5;
+
+    border: 1px solid var(--gold);
+    background: var(--surface);
+
+    box-shadow:
+        24px 24px 0 rgba(201, 166, 107, 0.07),
+        0 25px 80px rgba(0, 0, 0, 0.5);
+}
+
+/* Borda interna decorativa */
+
+.hero-photo-frame::before {
+    content: "";
+    position: absolute;
+    inset: 13px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Degradê sobre a fotografia */
+
+.hero-photo-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(5, 5, 5, 0.55),
+        transparent 55%
+    );
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter: saturate(0.78) contrast(1.08);
+
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+.hero-photo-frame:hover .hero-photo {
+    transform: scale(1.05);
+    filter: saturate(1) contrast(1.06);
+}
+
+
+/* 2. SELO SOBRE A FOTOGRAFIA */
+
+.hero-seal {
+    position: absolute;
+    right: -12px;
+    bottom: 43px;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    max-width: 250px;
+    padding: 20px 22px;
+
+    color: var(--bg);
+    background: var(--gold);
+
+    box-shadow: 0 15px 40px
+        rgba(0, 0, 0, 0.4);
+}
+
+.hero-seal svg {
+    width: 27px;
+    height: 27px;
+    flex-shrink: 0;
+}
+
+.hero-seal span {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1.4px;
+}
+
+
+/* 3. ÍCONES DOS SERVIÇOS */
+
+.service-icon {
+    width: 58px;
+    height: 58px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 26px;
+
+    color: var(--gold);
+    background: rgba(201, 166, 107, 0.07);
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.service-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.service-card:hover .service-icon {
+    color: #101010;
+    background: var(--gold);
+    transform: rotate(-8deg);
+}
+
+
+/* 4. SEÇÃO GALERIA */
+
+.gallery-section {
+    background: #101010;
+
+    border-top: 1px solid var(--border);
+}
+
+.gallery-heading {
+    max-width: 780px;
+}
+
+.gallery-intro {
+    max-width: 560px;
+
+    margin-top: -20px;
+    margin-bottom: 44px;
+
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* 5. GRID DA GALERIA */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 1fr 1fr;
+
+    gap: 18px;
+}
+
+.gallery-item {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    margin: 0;
+    aspect-ratio: 3 / 4;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+.gallery-item img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: saturate(0.75);
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+/* Sombra na parte inferior */
+
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.18) 45%,
+        transparent 75%
+    );
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* 6. LEGENDA DAS FOTOS */
+
+.gallery-item figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    padding: 30px;
+}
+
+.gallery-item figcaption span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--gold-light);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.gallery-item h3 {
+    font-family: var(--font-title);
+    font-size: clamp(26px, 3vw, 38px);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+
+/* 7. EFEITO HOVER NA GALERIA */
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+    filter: saturate(1);
+}
+
+
+/* 8. ANIMAÇÕES DE ENTRADA */
+
+/*
+   A classe reveal-ready será adicionada
+   pelo JavaScript apenas quando o navegador
+   suportar a animação.
+*/
+
+.reveal-ready {
+    opacity: 0;
+    transform: translateY(26px);
+
+    transition:
+        opacity 0.7s ease var(--reveal-delay, 0s),
+        transform 0.7s ease var(--reveal-delay, 0s);
+}
+
+.reveal-ready.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pequeno atraso entre os cartões */
+
+.service-card:nth-child(2),
+.gallery-item:nth-child(2) {
+    --reveal-delay: 0.12s;
+}
+
+.service-card:nth-child(3),
+.gallery-item:nth-child(3) {
+    --reveal-delay: 0.24s;
+}
+
+/* Mantém o hover dos serviços funcionando */
+
+.service-card.reveal-ready.is-visible:hover {
+    transform: translateY(-7px);
+}
+
+
+/* 9. TABLETS */
+
+@media (max-width: 900px) {
+
+    .hero-visual {
+        min-height: 510px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-item:first-child {
+        grid-column: span 2;
+        aspect-ratio: 16 / 9;
+    }
+
+    .hero-seal {
+        right: 3%;
+    }
+}
+
+
+/* 10. CELULARES */
+
+@media (max-width: 600px) {
+
+    .hero-visual {
+        min-height: 410px;
+        width: 100%;
+    }
+
+    .hero-photo-frame {
+        width: min(78vw, 310px);
+    }
+
+    .hero-seal {
+        right: 0;
+        bottom: 2px;
+
+        max-width: 205px;
+        padding: 15px;
+    }
+
+    .hero-seal span {
+        font-size: 9px;
+    }
+
+    .service-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item,
+    .gallery-item:first-child {
+        grid-column: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .gallery-item figcaption {
+        padding: 24px;
+    }
+
+    .gallery-intro {
+        font-size: 14px;
+    }
+}
+
+
+/* ==========================================
+   ETAPA 4 — MENU RESPONSIVO
+========================================== */
+
+/* Botão escondido no computador */
+
+.menu-toggle {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+
+    color: var(--gold);
+    background: transparent;
+
+    border: 1px solid var(--border);
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+
+/* Linhas do ícone */
+
+.menu-toggle span {
+    display: block;
+
+    width: 22px;
+    height: 2px;
+
+    background: currentColor;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+/* Transformação em X quando aberto */
+
+.menu-toggle.is-active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.is-active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.menu-toggle:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 4px;
+}
+
+
+/* Estilos específicos do celular */
+
+@media (max-width: 600px) {
+
+    .header-content {
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1fr) auto;
+
+        align-items: center;
+        gap: 14px;
+
+        padding-block: 16px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navigation {
+        grid-column: 1 / -1;
+
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        padding: 12px 0 4px;
+
+        border-top: 1px solid var(--border);
+    }
+
+    .navigation a {
+        display: block;
+
+        padding: 12px 8px;
+        font-size: 13px;
+    }
+
+    /* Só esconde o menu se JS estiver ativo */
+
+    .js-enabled .navigation:not(.is-open) {
+        display: none;
+    }
+
+    .js-enabled .navigation.is-open {
+        display: flex;
+    }
+}
+
+
+/* ==========================================
+   ETAPA 4 — GALERIA INTERATIVA
+========================================== */
+
+/* Botão que ocupa toda a fotografia */
+
+.gallery-open {
+    position: absolute;
+    inset: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    cursor: zoom-in;
+}
+
+.gallery-open img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-open:focus-visible {
+    outline: 3px solid var(--gold-light);
+    outline-offset: -5px;
+}
+
+/* Mantém as legendas sem bloquear os cliques */
+
+.gallery-item figcaption {
+    pointer-events: none;
+}
+
+
+/* JANELA AMPLIADA */
+
+.gallery-dialog {
+    position: fixed;
+
+    width: min(900px, calc(100% - 32px));
+    max-height: 90vh;
+
+    margin: auto;
+    padding: 18px;
+
+    color: var(--white);
+    background: #101010;
+
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+
+    box-shadow: 0 30px 100px
+        rgba(0, 0, 0, 0.65);
+
+    overflow: auto;
+}
+
+/* Fundo escuro atrás da janela */
+
+.gallery-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(8px);
+}
+
+.gallery-dialog figure {
+    margin: 0;
+}
+
+.gallery-dialog img {
+    display: block;
+
+    width: 100%;
+    max-height: 72vh;
+
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.gallery-dialog figcaption {
+    padding: 16px 4px 2px;
+
+    color: var(--gold-light);
+    font-family: var(--font-title);
+    font-size: 26px;
+    text-align: center;
+}
+
+
+/* BOTÃO FECHAR */
+
+.gallery-close {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
+    display: grid;
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    margin-left: auto;
+    margin-bottom: 10px;
+
+    color: var(--gold-light);
+    background: #25211b;
+
+    border: 1px solid var(--border);
+    border-radius: 3px;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.gallery-close:hover {
+    color: #101010;
+    background: var(--gold);
+}
+
+
+/* ==========================================
+   ETAPA 4 — AGENDAMENTO
+========================================== */
+
+.service-booking {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 12px;
+
+    margin-top: 18px;
+
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    transition:
+        color 0.3s ease,
+        gap 0.3s ease;
+}
+
+.service-booking:hover {
+    color: var(--gold-light);
+    gap: 18px;
+}
+
+.service-booking span {
+    font-size: 18px;
+}
+
+.contact .button {
+    margin-top: 32px;
+}
+
+.booking-status {
+    max-width: 540px;
+
+    margin-top: 22px;
+    padding: 14px 18px;
+
+    color: var(--gold-light);
+    background: rgba(201, 166, 107, 0.08);
+
+    border: 1px solid var(--border);
+    border-radius: 3px;
+
+    font-size: 13px;
+    text-align: center;
+}
+
+.booking-status[hidden] {
+    display: none;
+}
+
+
+/* ==========================================
+   ETAPA 5 — ACABAMENTO E RESPONSIVIDADE
+========================================== */
+
+
+/* 1. AJUSTES GLOBAIS */
+
+body {
+    overflow-wrap: break-word;
+}
+
+/* Evita que imagens ultrapassem seu espaço */
+
+img {
+    max-width: 100%;
+}
+
+/* Distância para navegação por âncoras */
+
+section[id] {
+    scroll-margin-top: 110px;
+}
+
+
+/* 2. LINK DE ACESSIBILIDADE */
+
+.skip-link {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 9999;
+
+    padding: 12px 18px;
+
+    color: #0b0b0b;
+    background: var(--gold-light);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    border-radius: 3px;
+
+    transform: translateY(-160%);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+
+/* 3. MELHORIAS DE LEGIBILIDADE */
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 2.2px;
+}
+
+.hero-description,
+.gallery-intro {
+    line-height: 1.85;
+}
+
+.service-card p {
+    line-height: 1.85;
+}
+
+.footer {
+    font-size: 13px;
+}
+
+
+/* 4. ÁREAS DE TOQUE */
+
+.navigation a {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 44px;
+}
+
+.service-booking {
+    min-height: 44px;
+}
+
+.gallery-close {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+
+/* 5. INDICAÇÃO DE FOCO POR TECLADO */
+
+button:focus-visible,
+.service-booking:focus-visible,
+.gallery-close:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 4px;
+}
+
+
+/* 6. FOTOGRAFIAS */
+
+.hero-photo,
+.gallery-item img {
+    background-color: #181818;
+}
+
+/* Evita que legendas muito longas saiam da foto */
+
+.gallery-item figcaption {
+    max-width: 100%;
+}
+
+
+/* 7. TELAS INTERMEDIÁRIAS */
+
+@media (min-width: 768px) and (max-width: 1100px) {
+
+    .hero-content {
+        gap: 35px;
+    }
+
+    .section {
+        padding-block: 90px;
+    }
+
+}
+
+
+/* 8. TABLETS PEQUENOS */
+
+@media (max-width: 767px) {
+
+    .header-content {
+        min-height: 76px;
+    }
+
+    .navigation a {
+        min-height: 44px;
+        padding: 12px 8px;
+        font-size: 13px;
+    }
+
+    .hero-content {
+        gap: 35px;
+    }
+
+    .section {
+        padding-block: 75px;
+    }
+
+    .section h2 {
+        line-height: 1.1;
+    }
+
+    .gallery-dialog {
+        padding: 12px;
+    }
+
+}
+
+
+/* 9. CELULARES PEQUENOS */
+
+@media (max-width: 380px) {
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .logo {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: clamp(43px, 11vw, 54px);
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .section h2 {
+        font-size: clamp(37px, 11vw, 46px);
+    }
+
+    .service-card {
+        padding: 30px 24px;
+    }
+
+    .hero-seal {
+        max-width: 190px;
+        padding: 13px;
+    }
+
+    .gallery-item h3 {
+        font-size: 29px;
+    }
+
+    .gallery-item figcaption {
+        padding: 18px;
+    }
+
+}
+
+
+
+/* CORREÇÃO FINAL — SOBRE NÓS */
+
+.about .about-description,
+.about .about-benefit p {
+    grid-area: auto;
+    padding: 0;
+    border: 0;
+    max-width: none;
+}
+
+.about .about-description {
+    margin-bottom: 35px;
+}
+
+.about .about-benefit p {
+    margin-bottom: 0;
+}
